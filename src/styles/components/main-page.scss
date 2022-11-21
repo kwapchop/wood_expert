@@ -1,0 +1,487 @@
+.phone.error {
+  position: relative;
+  border-bottom: 1px solid #DE0303 !important;
+
+  &:before {
+    position: absolute;
+    bottom: -10px;
+    width: 30px;
+    height: 10px;
+    background-color: #DE0303;
+    content: 'Ошибка';
+  }
+}
+
+.tippy-box[data-theme~='error'] {
+  font-size: 12px;
+  padding: 3px;
+  background-color: #DE0303;
+
+  .tippy-arrow {
+    color: #DE0303;
+  }
+}
+
+.banner-holder {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 120px;
+}
+
+.banner-on-svg {
+  position: absolute;
+  left: 125px;
+  top: 102px;
+}
+
+.main-page {
+  .banner-on-svg {
+    position: fixed;
+  }
+
+  .footer__society {
+    position: fixed;
+  }
+}
+
+.banner {
+  max-width: 100%;
+
+  &__text {
+    position: absolute;
+    bottom: 183px;
+    font-style: normal;
+    font-weight: 200;
+    font-size: 56px;
+    line-height: 66px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 3px 24px 19px;
+    background: rgba(0, 0, 0, 0.55);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.main-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  width: 377px;
+  height: 100vh;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(3px);
+  background: rgba(0, 0, 0, 0.75);
+  z-index: 5;
+  right: 0;
+  color: white;
+  padding: 86px 50px 20px 37px;
+  box-sizing: border-box;
+
+  &__phone {
+    margin: 0 0 35px;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 31px;
+    color: white;
+    text-decoration: none;
+  }
+
+  &__nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      font-weight: 200;
+      font-size: 20px;
+      line-height: 23px;
+      margin-bottom: 42px;
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__info {
+    font-size: 12px;
+  }
+
+  hr {
+    margin-right: -50px;
+    opacity: 0.4;
+    border: 1px solid #FFFFFF;
+    width: 100%;
+  }
+
+  &__apply {
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 26px;
+    margin-top: 130px;
+  }
+
+  input {
+    height: 50px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.8);
+    color: #fff;
+    margin-bottom: 20px;
+    width: 100%;
+
+    &:hover, &:active, &:focus {
+      border-bottom-color: #fff;
+      outline: none;
+    }
+
+    &::placeholder {
+      color: #E5E5E5;
+    }
+
+    &:last-child {
+      margin-bottom: 42px;
+    }
+  }
+
+  button {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    margin-top: auto;
+    padding: 6px 37px;
+    width: 100%;
+    background-color: #BE9772;
+  }
+
+  &__sub-menu {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(3px);
+    background: rgba(0, 0, 0, 0.35);
+    position: absolute;
+    left: -329px;
+    bottom: -36px;
+    margin: 0;
+    padding: 28px 24px;
+
+    a {
+      list-style: none;
+      margin-bottom: 21px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+}
+
+#cssmenu,
+#cssmenu .element-list,
+#cssmenu .element-list .element-list__menu,
+#cssmenu .element-list .element-list__menu a,
+#cssmenu #menu-button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+  line-height: 1;
+  display: block;
+  position: relative;
+  box-sizing: border-box;
+}
+
+#cssmenu:after,
+#cssmenu > .element-list:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+#cssmenu #menu-button {
+  display: none;
+}
+
+#cssmenu > .element-list > .element-list__menu {
+  float: left;
+}
+
+#cssmenu.align-center > .element-list {
+  font-size: 0;
+  text-align: center;
+}
+
+#cssmenu > .element-list {
+  display: flex;
+  flex-direction: column;
+}
+
+#cssmenu.align-center > .element-list > .element-list__menu {
+  display: inline-block;
+  float: none;
+}
+
+#cssmenu.align-center .element-list .element-list {
+  text-align: left;
+}
+
+#cssmenu.align-right > .element-list > .element-list__menu {
+  float: right;
+}
+
+#cssmenu > .element-list > .element-list__menu > a {
+  font-weight: 200;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 21px;
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#cssmenu > .element-list > .element-list__menu:hover > a {
+  color: #ffffff;
+}
+
+#cssmenu > .element-list > .element-list__menu.has-sub > a {
+  padding-right: 30px;
+}
+
+#cssmenu .element-list .element-list {
+  position: absolute;
+  left: -9999px;
+}
+
+#cssmenu.align-right .element-list .element-list {
+  text-align: right;
+}
+
+#cssmenu .element-list .element-list .element-list__menu {
+  transition: all .25s ease;
+}
+
+#cssmenu .element-list__menu:hover > .element-list {
+  z-index: 5000;
+  left: -129px;
+  top: -8px;
+  padding-right: 63px;
+  margin-left: -173px;
+}
+
+#cssmenu.align-right .element-list__menu:hover > .element-list {
+  left: auto;
+  right: 0;
+}
+
+#cssmenu .element-list__menu:hover > .element-list > .element-list__menu {
+  height: 35px;
+}
+
+#cssmenu .element-list .element-list .element-list {
+  margin-left: 100%;
+  top: 0;
+}
+
+#cssmenu.align-right .element-list .element-list .element-list {
+  margin-left: 0;
+  margin-right: 100%;
+}
+
+#cssmenu .element-list .element-list {
+}
+
+#cssmenu .element-list .element-list .element-list__menu a {
+  font-weight: 200;
+  font-size: 19px;
+  line-height: 23px;
+  margin-bottom: 21px;
+  color: #fff;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 1605px) {
+  .main-page .footer__society {
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .main-page {
+    .footer {
+      flex-direction: column-reverse;
+    }
+
+    .footer__society {
+      position: initial;
+      margin-bottom: 40px;
+    }
+
+    .footer__center {
+      width: 100%;
+      flex-basis: initial;
+    }
+  }
+}
+
+@media all and (max-width: 768px), only screen and (-webkit-min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min--moz-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (-o-min-device-pixel-ratio: 2/1) and (max-width: 1024px), only screen and (min-device-pixel-ratio: 2) and (max-width: 1024px), only screen and (min-resolution: 192dpi) and (max-width: 1024px), only screen and (min-resolution: 2dppx) and (max-width: 1024px) {
+  #cssmenu {
+    width: 100%;
+  }
+  #cssmenu .element-list {
+    width: 100%;
+    display: none;
+  }
+  #cssmenu.align-center > .element-list {
+    text-align: left;
+  }
+  #cssmenu .element-list .element-list__menu {
+    width: 100%;
+    border-top: 1px solid rgba(120, 120, 120, 0.2);
+  }
+  #cssmenu .element-list .element-list .element-list__menu,
+  #cssmenu .element-list__menu:hover > .element-list > .element-list__menu {
+    height: auto;
+  }
+  #cssmenu .element-list .element-list__menu a,
+  #cssmenu .element-list .element-list .element-list__menu a {
+    width: 100%;
+    border-bottom: 0;
+  }
+  #cssmenu > .element-list > .element-list__menu {
+    float: none;
+  }
+  #cssmenu .element-list .element-list .element-list__menu a {
+    padding-left: 25px;
+  }
+  #cssmenu .element-list .element-list .element-list .element-list__menu a {
+    padding-left: 35px;
+  }
+  #cssmenu .element-list .element-list .element-list__menu a {
+    background: none;
+  }
+  #cssmenu .element-list .element-list .element-list__menu:hover > a,
+  #cssmenu .element-list .element-list .element-list__menu.active > a {
+    color: #ffffff;
+  }
+  #cssmenu .element-list .element-list,
+  #cssmenu .element-list .element-list .element-list,
+  #cssmenu.align-right .element-list .element-list {
+    position: relative;
+    left: 0;
+    width: 100%;
+    margin: 0;
+    text-align: left;
+  }
+  #cssmenu #menu-button {
+    display: block;
+    padding: 17px;
+    color: #dddddd;
+    cursor: pointer;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
+  #cssmenu .submenu-button {
+    position: absolute;
+    z-index: 99;
+    right: 0;
+    top: 0;
+    display: block;
+    border-left: 1px solid rgba(120, 120, 120, 0.2);
+    height: 46px;
+    width: 46px;
+    cursor: pointer;
+  }
+  #cssmenu .submenu-button.submenu-opened {
+    background: #262626;
+  }
+  #cssmenu .element-list .element-list .submenu-button {
+    height: 34px;
+    width: 34px;
+  }
+  #cssmenu .submenu-button:after {
+    position: absolute;
+    top: 22px;
+    right: 19px;
+    width: 8px;
+    height: 2px;
+    display: block;
+    background: #dddddd;
+    content: '';
+  }
+  #cssmenu .element-list .element-list .submenu-button:after {
+    top: 15px;
+    right: 13px;
+  }
+  #cssmenu .submenu-button.submenu-opened:after {
+    background: #ffffff;
+  }
+}
+
+#cssmenu .element-list .element-list .element-list__menu:last-child a {
+  margin-bottom: 0;
+}
+
+#cssmenu .element-list__menu:hover > .element-list.element-list-sub-sub {
+  left: -414px;
+  display: flex;
+  flex-direction: column;
+}
+
+.element-list-sub-sub__menu {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(3px);
+  background: rgba(0, 0, 0, 0.75);
+  padding: 14px 21px;
+  margin-left: -50px;
+}
+
+.element-list__sub-title {
+  padding: 28px 24px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  backdrop-filter: blur(3px);
+  background: rgba(0, 0, 0, 0.75);
+}
+
+.element-list-first > div > a {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 23px;
+  margin-bottom: 42px !important;
+}
+
+@media screen and (max-width: 1800px) {
+  .main-menu {
+    display: none;
+  }
+  .banner-on-svg {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .banner__text {
+    font-size: 20px;
+    bottom: 20px;
+  }
+}
+

@@ -1,0 +1,218 @@
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  margin: -48px 0 67px;
+
+  &-body {
+    &-catalog {
+      .tabs-element img {
+        filter: none;
+      }
+
+      .tabs-catalog-info {
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 333px;
+        background: rgba(0, 0, 0, 0.4);
+
+        h5 {
+          font-weight: 400;
+          font-size: 32px;
+          line-height: 38px;
+          text-align: center;
+          text-transform: uppercase;
+          color: #F2F2F2;
+        }
+
+        p {
+          font-weight: 200;
+          font-size: 24px;
+          line-height: 28px;
+          text-align: center;
+          color: #F2F2F2;
+        }
+      }
+
+      .tabs-element {
+        &:hover {
+          .tabs-catalog-info {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+
+  &-element {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px;
+
+    &:hover {
+      cursor: pointer;
+
+      span {
+        text-decoration: underline;
+      }
+    }
+
+    img {
+      filter: brightness(0.6);
+    }
+
+    span {
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      width: 80%;
+      font-size: 32px;
+      line-height: 38px;
+      text-align: center;
+      text-transform: uppercase;
+      color: #F2F2F2;
+    }
+  }
+
+  &-inner-element {
+    position: relative;
+    margin-bottom: 65px;
+
+    a {
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 330px;
+      display: none;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 38px;
+      text-align: center;
+      text-decoration-line: underline;
+      text-transform: uppercase;
+      color: #F2F2F2;
+      background: rgba(0, 0, 0, 0.4);
+    }
+
+    &:hover {
+      cursor: pointer;
+
+      a {
+        display: flex;
+      }
+    }
+
+    img {
+      margin-bottom: 22px;
+    }
+
+    h4 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 23px;
+      text-transform: uppercase;
+      color: #4F4F4F;
+      margin: 0 0 25px;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    span {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 140%;
+      color: #4F4F4F;
+    }
+  }
+
+  &-catalog-info {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-interactive {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 12px;
+
+    p {
+      font-family: 'Open Sans';
+      margin: 0;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 27px;
+      text-transform: uppercase;
+      color: #4F4F4F;
+    }
+
+    button {
+      height: 43px;
+      padding: 8px 26px;
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
+}
+
+.tab-link {
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  color: #4F4F4F;
+  text-decoration: none;
+  padding: 0 5px;
+
+  &.active {
+    font-weight: bold;
+  }
+}
+
+.tab-body {
+  display: none;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  &.active {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 1189px) {
+  .tab-body {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .tab-link {
+    font-size: 14px;
+  }
+  .tabs {
+    flex-wrap: wrap;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .tabs-element span {
+    font-size: 24px;
+  }
+  .tabs-element img {
+    max-width: 100%;
+  }
+  .tabs-inner-element img {
+    max-width: 100%;
+  }
+}

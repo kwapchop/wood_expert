@@ -1,0 +1,23 @@
+.breadcrumbs {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 27px;
+
+  a {
+    color: #876953;
+    text-decoration: none;
+  }
+
+  svg {
+    margin: 0 16px;
+  }
+
+  span:last-child {
+    color: #A7A7A7;
+
+  }
+}

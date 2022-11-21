@@ -1,0 +1,136 @@
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  margin-top: 60px;
+
+  &__society {
+    display: flex;
+    justify-content: space-between;
+    width: 134px;
+    position: absolute;
+    left: 137px;
+    bottom: 35px;
+
+    a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+
+  &__center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-basis: 1038px;
+    height: 100%;
+  }
+
+  &__upper {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 20px;
+    text-transform: uppercase;
+    color: #7C7C7C;
+
+    img {
+      margin-left: 8px;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .horizontal {
+    margin-bottom: 35px;
+    border: 1px solid #BDBDBD;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  &__info {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 20px;
+
+    color: #7C7C7C;
+    margin-bottom: 36px;
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    span:nth-child(2) {
+      margin-left: -62px;
+    }
+  }
+
+  &__form {
+    width: 100%;
+    display: flex;
+
+    .input {
+      width: 286px;
+      margin-right: 91px;
+      height: 50px;
+
+      &::placeholder {
+        text-transform: uppercase;
+      }
+    }
+
+    button {
+      margin-left: auto;
+      white-space: nowrap;
+      padding: 13px 40px;
+      height: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .footer__center {
+    flex-basis: 739px;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .footer {
+    flex-direction: column-reverse;
+  }
+  .footer__society {
+    position: initial;
+    margin-bottom: 40px;
+  }
+  .footer__center {
+    width: 100%;
+    flex-basis: initial;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    padding-bottom: 20px;
+  }
+  .footer__info span:nth-child(2) {
+    margin-left: 0;
+  }
+  .footer__info {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+
+    span {
+      margin-bottom: 20px;
+    }
+  }
+}

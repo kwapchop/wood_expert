@@ -1,0 +1,23 @@
+.link-back {
+  display: inline-flex;
+  flex-direction: column;
+  text-align: center;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.link-back p {
+  margin: 0;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 23px;
+  text-transform: uppercase;
+  color: #4F4F4F;
+}
+
+.link-center {
+  margin: 0 auto;
+}

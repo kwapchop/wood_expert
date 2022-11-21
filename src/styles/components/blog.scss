@@ -1,0 +1,144 @@
+.blog-list {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.blog-element {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  box-sizing: border-box;
+  margin-bottom: 130px;
+
+  &:nth-child(odd) {
+    padding-right: 84px;
+  }
+
+  &:nth-child(even) {
+    padding-left: 84px;
+  }
+
+  img {
+    margin-bottom: 25px;
+  }
+
+  h4 {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: #4F4F4F;
+    margin: 0 0 25px;
+  }
+
+  & > p {
+    margin: 0;
+    font-weight: 200;
+    font-size: 20px;
+    line-height: 140%;
+    color: #4F4F4F;
+    height: 84px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    margin-bottom: 21px;
+  }
+
+  .link-back {
+    margin-left: auto;
+
+    p {
+      text-align: left;
+    }
+
+    svg {
+      width: 137px
+    }
+  }
+}
+
+.blog {
+  &-article {
+    position: relative;
+    margin-bottom: 120px;
+
+    &__sidebar {
+      box-sizing: border-box;
+      width: 512px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 66px 75px;
+      height: 787px;
+      overflow: auto;
+
+      h4 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 28px;
+        display: flex;
+        align-items: center;
+        text-transform: uppercase;
+        color: #F2F2F2;
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 23px;
+        display: flex;
+        align-items: center;
+        color: #F2F2F2;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .blog-article img {
+    max-width: 100%;
+  }
+  .blog-article__sidebar {
+    padding: 10px 20px;
+    width: 80%;
+    height: calc(100% - 5px);
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .blog-element {
+
+    &:nth-child(odd) {
+      padding-right: 10px;
+    }
+
+    &:nth-child(even) {
+      padding-left: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .blog-element {
+    width: 100%;
+    flex-direction: column;
+
+    &:nth-child(odd) {
+      padding-right: 0;
+    }
+
+    &:nth-child(even) {
+      padding-left: 0;
+    }
+  }
+  .blog-article__sidebar {
+    h4 {
+      font-size: 16px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}

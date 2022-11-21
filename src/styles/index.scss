@@ -1,0 +1,31 @@
+@import '~normalize.css';
+@import './fonts.scss';
+
+$main-color: tomato;
+
+.container {
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+@import 'components/main';
+@import 'components/button';
+@import 'components/input';
+@import 'components/breadcrumbs';
+@import 'components/link-back';
+@import 'components/modal';
+@import 'components/header';
+@import 'components/footer';
+@import 'components/error';
+@import 'components/contacts';
+@import 'components/map';
+@import 'components/main-page';
+@import 'components/block';
+@import 'components/tabs';
+@import 'components/blog';
+@import 'components/catalog-article';
+
+
+
+
