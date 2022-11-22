@@ -1,15 +1,7 @@
-.phone.error {
+[data-phone].error,
+[data-email].error {
   position: relative;
   border-bottom: 1px solid #DE0303 !important;
-
-  &:before {
-    position: absolute;
-    bottom: -10px;
-    width: 30px;
-    height: 10px;
-    background-color: #DE0303;
-    content: 'Ошибка';
-  }
 }
 
 .tippy-box[data-theme~='error'] {

@@ -18,6 +18,14 @@ $(document).ready(function () {
         placement: 'bottom-start',
         theme: 'error',
     });
+    const tipEmail = tippy('[data-email]', {
+        content: "Ошибка",
+        arrow: true,
+        trigger: 'manual',
+        placement: 'bottom-start',
+        theme: 'error',
+    });
+    const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
     let regex = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
     $('[data-phone]').on('input', function (e) {
         if (!regex.test(e.target.value)) {
@@ -31,7 +39,24 @@ $(document).ready(function () {
             $(e.target).removeClass('error');
             for (let i = 0; i < tip.length; i++) {
                 if (e.target.isEqualNode(tip[i].reference)) {
-                    tip[i].show();
+                    tip[i].hide();
+                }
+            }
+        }
+    });
+    $('[data-email]').on('input', function (e) {
+        if (!EMAIL_REGEXP.test(e.target.value)) {
+            $(e.target).addClass('error');
+            for (let i = 0; i < tipEmail.length; i++) {
+                if (e.target.isEqualNode(tipEmail[i].reference)) {
+                    tipEmail[i].show();
+                }
+            }
+        } else {
+            $(e.target).removeClass('error');
+            for (let i = 0; i < tipEmail.length; i++) {
+                if (e.target.isEqualNode(tipEmail[i].reference)) {
+                    tipEmail[i].hide();
                 }
             }
         }

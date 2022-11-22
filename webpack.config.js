@@ -27,7 +27,7 @@ const optimization = () => {
     return config;
 };
 
-const filename = ext => isDevelopment ? `[name].${ext}` : `[name].[hash].${ext}`;
+const filename = ext => isDevelopment ? `[name].${ext}` : `[name].${ext}`;
 
 const cssLoaders = (extra) => {
     const loaders = [
