@@ -205,7 +205,12 @@
     padding: 0;
 
     &__navigation {
-      display: none;
+      padding-top: 0;
+      width: auto;
+    }
+
+    &__link {
+      margin: 0 15px;
     }
 
     &__burger {
@@ -226,7 +231,22 @@
   }
 }
 
+@media screen and (max-width: 1300px) {
+  .header__link {
+    margin: 0 10px;
+    font-size: 18px;
+  }
+
+  .header__call-phone {
+    font-size: 20px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
+  .header__navigation {
+    display: none;
+  }
+
   .header__call-phone {
     font-size: 14px;
   }

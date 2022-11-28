@@ -80,12 +80,6 @@ const jsLoaders = () => {
 
 const plugins = () => {
     const base = [
-        new HTMLWebpackPlugin({
-            template: './page/index.html',
-            minify: {
-                collapseWhitespace: isProduction
-            }
-        }),
         new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
             {
@@ -136,10 +130,6 @@ module.exports = {
                 use: cssLoaders()
             },
             {
-                test: /\.less$/,
-                use: cssLoaders('less-loader')
-            },
-            {
                 test: /\.s[ac]ss$/,
                 use: cssLoaders('sass-loader')
             },
@@ -148,38 +138,14 @@ module.exports = {
                 use: ['file-loader']
             },
             {
-                test: /\.(ttf|woff|woff2|eot)$/,
-                use: ['file-loader']
-            },
-            {
-                test: /\.xml$/,
-                use: ['xml-loader']
-            },
-            {
-                test: /\.csv$/,
-                use: ['csv-loader']
-            },
-            {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 loader: jsLoaders()
             },
             {
-                test: /\.ts$/,
-                exclude: /node_modules/,
-                loader: {
-                    loader: 'babel-loader',
-                    options: babelOptions('@babel/preset-typescript')
-                }
+                test: /\.(ttf|woff|woff2|eot)$/,
+                use: ['file-loader']
             },
-            {
-                test: /\.jsx$/,
-                exclude: /node_modules/,
-                loader: {
-                    loader: 'babel-loader',
-                    options: babelOptions('@babel/preset-react')
-                }
-            }
         ]
     }
 };

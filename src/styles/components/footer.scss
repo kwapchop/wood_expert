@@ -81,18 +81,19 @@
     .input {
       width: 286px;
       margin-right: 91px;
-      height: 50px;
+      height: 36px;
 
       &::placeholder {
         text-transform: uppercase;
+        font-size: 16px;
       }
     }
 
     button {
       margin-left: auto;
       white-space: nowrap;
-      padding: 13px 40px;
-      height: 50px;
+      padding: 9px 40px;
+      height: 40px;
     }
   }
 }
