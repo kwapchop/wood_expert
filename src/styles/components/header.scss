@@ -172,7 +172,10 @@
     text-decoration-line: none;
     color: #FFFFFF;
 
-    &:hover {
+  }
+
+  &:hover {
+    .number {
       text-decoration: underline;
     }
   }

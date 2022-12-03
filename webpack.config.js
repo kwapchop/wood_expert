@@ -80,22 +80,16 @@ const jsLoaders = () => {
 
 const plugins = () => {
     const base = [
-        new CleanWebpackPlugin(),
         new CopyWebpackPlugin([
             {
                 from: path.resolve(__dirname, 'src/favicon.ico'),
-                to: path.resolve(__dirname, 'dist')
+                to: path.resolve(__dirname, 'src/assets')
             }
         ]),
         new MiniCssExtractPlugin({
             filename: filename('css')
         })
     ];
-
-    if (isProduction) {
-        base.push(new BundleAnalyzerPlugin());
-    }
-
     return base;
 };
 
@@ -107,7 +101,7 @@ module.exports = {
     },
     output: {
         filename: filename('js'),
-        path: path.resolve(__dirname, 'dist')
+        path: path.resolve(__dirname, 'src/assets')
     },
     resolve: {
         extensions: ['.js', '.json', '.png'],

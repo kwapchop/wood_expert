@@ -1,6 +1,5 @@
 import './styles/index.scss';
 import './assets/fonts/Roboto-Regular.ttf';
-import './modal.js';
 
 document.addEventListener('DOMContentLoaded', function () {
     const scroller = document.querySelector('[data-scroll-up]');
