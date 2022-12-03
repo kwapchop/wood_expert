@@ -4,8 +4,13 @@ document.addEventListener('DOMContentLoaded', function () {
         const list = $($(e.currentTarget).next()[0]);
         list.toggleClass('show');
     })
+    $('[data-pagination-tabs]').on('click', function (e) {
+        e.stopPropagation();
+        const list = $($(e.currentTarget).find('.pagination-list'));
+        list.toggleClass('show');
+    })
+
     $(document).on('click', function (e) {
-        console.log($('[data-pagination]'))
         const list = $($($('[data-pagination]')).next()[0]);
         list.removeClass('show');
     })

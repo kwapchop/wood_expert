@@ -1,6 +1,5 @@
 // $(document).ready(function () {
 //     const menuElements = $('[data-menu]').children('a');
-//     console.log(menuElements);
 //     menuElements.on('mouseover', function (e) {
 //         $(e.currentTarget).next('[data-sub]').show();
 //     })
@@ -11,54 +10,20 @@
 //     })
 // });
 $(document).ready(function () {
-    const tip = tippy('[data-phone]', {
-        content: "Ошибка",
-        arrow: true,
-        trigger: 'manual',
-        placement: 'bottom-start',
-        theme: 'error',
-    });
-    const tipEmail = tippy('[data-email]', {
-        content: "Ошибка",
-        arrow: true,
-        trigger: 'manual',
-        placement: 'bottom-start',
-        theme: 'error',
-    });
     const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
     let regex = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
     $('[data-phone]').on('input', function (e) {
         if (!regex.test(e.target.value)) {
             $(e.target).addClass('error');
-            for (let i = 0; i < tip.length; i++) {
-                if (e.target.isEqualNode(tip[i].reference)) {
-                    tip[i].show();
-                }
-            }
         } else {
             $(e.target).removeClass('error');
-            for (let i = 0; i < tip.length; i++) {
-                if (e.target.isEqualNode(tip[i].reference)) {
-                    tip[i].hide();
-                }
-            }
         }
     });
     $('[data-email]').on('input', function (e) {
         if (!EMAIL_REGEXP.test(e.target.value)) {
             $(e.target).addClass('error');
-            for (let i = 0; i < tipEmail.length; i++) {
-                if (e.target.isEqualNode(tipEmail[i].reference)) {
-                    tipEmail[i].show();
-                }
-            }
         } else {
             $(e.target).removeClass('error');
-            for (let i = 0; i < tipEmail.length; i++) {
-                if (e.target.isEqualNode(tipEmail[i].reference)) {
-                    tipEmail[i].hide();
-                }
-            }
         }
     })
 });
@@ -135,6 +100,7 @@ $(function () {
             $('[data-elements]').hide();
             $('[data-sub-elements]').hide();
         }
+
         $(this).toggleClass('open');
         $('.header__menu-burger').toggleClass('active');
 
@@ -149,7 +115,6 @@ $(function () {
             $('[data-menu-first] [data-menu]').removeClass('active');
             $(e.target).addClass('active');
             const index = $(this).data('menu');
-            // console.log($(this).data('menu'));
             $('[data-elements]').hide();
             $('[data-sub-elements]').hide();
             $('[data-menu-second]').find(`[data-elements-${index}]`).show();
@@ -159,7 +124,6 @@ $(function () {
             $('[data-menu-second] [data-menu]').removeClass('active');
             $(e.target).addClass('active');
             const index = $(this).data('menu');
-            // console.log($(this).data('menu'));
             $('[data-sub-elements]').hide();
             $('[data-menu-third]').find(`[data-sub-elements-${index}]`).show();
         })
@@ -168,7 +132,6 @@ $(function () {
             $('[data-menu-first] [data-menu]').removeClass('active');
             $(e.target).addClass('active');
             const index = $(this).data('menu');
-            // console.log($(this).data('menu'));
             $('[data-elements]').hide();
             $('[data-sub-elements]').hide();
             $('[data-menu-second]').find(`[data-elements-${index}]`).show();
@@ -177,7 +140,6 @@ $(function () {
             $('[data-menu-second] [data-menu]').removeClass('active');
             $(e.target).addClass('active');
             const index = $(this).data('menu');
-            // console.log($(this).data('menu'));
             $('[data-sub-elements]').hide();
             $('[data-menu-third]').find(`[data-sub-elements-${index}]`).show();
         })

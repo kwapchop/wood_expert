@@ -4,20 +4,28 @@
   font-size: 15px;
   line-height: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 27px;
 
   a {
     color: #876953;
     text-decoration: none;
+    margin-bottom: 5px;
   }
 
   svg {
-    margin: 0 16px;
+    margin: 0 16px 5px;
   }
 
   span:last-child {
     color: #A7A7A7;
 
+  }
+}
+
+@media screen and (max-width: 1800px) {
+  .breadcrumbs {
+    margin-top: 65px;
   }
 }

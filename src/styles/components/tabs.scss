@@ -166,6 +166,11 @@
   }
 }
 
+.pagination-tabs {
+  display: none;
+  align-self: flex-start;
+}
+
 .tab-link {
   font-weight: 300;
   font-size: 18px;
@@ -201,7 +206,30 @@
     font-size: 14px;
   }
   .tabs {
+    display: none;
     flex-wrap: wrap;
+  }
+  .pagination-tabs {
+    display: flex !important;
+    align-self: flex-start !important;
+
+    .pagination-input {
+      border: none;
+      font-size: 15px;
+      width: 160px;
+    }
+
+    .pagination-list {
+      width: auto;
+      align-items: flex-start;
+    }
+
+    .pagination-list a {
+      font-size: 15px;
+      padding: 5px;
+      white-space: nowrap;
+      text-transform: none;
+    }
   }
 }
 

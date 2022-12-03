@@ -23,6 +23,11 @@
     margin-bottom: 25px;
   }
 
+  a {
+    color: #4F4F4F;
+    text-decoration: none;
+  }
+
   h4 {
     font-weight: 300;
     font-size: 20px;
@@ -47,7 +52,7 @@
   .link-back {
     margin-left: auto;
 
-    p {
+    a {
       text-align: left;
     }
 
