@@ -16,6 +16,10 @@
 
 [data-phone] {
   font-family: 'Open Sans';
+
+  &::placeholder {
+    font-family: 'Raleway';
+  }
 }
 
 .banner-holder {

@@ -219,11 +219,11 @@
                 </svg>
             </span>
             <div class="pagination-list">
-                <a class="tab-link active" data-tab data-tab-1 href="">Все проекты</a>
-                <a class="tab-link" data-tab data-tab-2 href="">Мебель</a>
-                <a class="tab-link" data-tab data-tab-3 href="">Лестницы</a>
-                <a class="tab-link" data-tab data-tab-4 href="">Двери</a>
-                <a class="tab-link" data-tab data-tab-5 href="">Элементы интерьера</a>
+                <a class="tab-link active" data-tab-mini data-tab-1 href="">Все проекты</a>
+                <a class="tab-link" data-tab-mini data-tab-2 href="">Мебель</a>
+                <a class="tab-link" data-tab-mini data-tab-3 href="">Лестницы</a>
+                <a class="tab-link" data-tab-mini data-tab-4 href="">Двери</a>
+                <a class="tab-link" data-tab-mini data-tab-5 href="">Элементы интерьера</a>
             </div>
         </div>
     </div>
@@ -390,8 +390,8 @@
         <span data-scroll-up class="footer__upper">Вернуться наверх <img src="../assets/images/arrow-up.svg" alt=""></span>
         <div class="horizontal"></div>
         <form class="footer__form">
-            <input class="input input__standard" type="text" placeholder="Имя">
-            <input class="input input__standard" type="text" placeholder="Телефон" data-phone>
+            <input class="input input__standard" name="name" type="text" placeholder="Имя">
+            <input class="input input__standard number" name="phone" type="text" placeholder="Телефон" data-phone>
             <button class="button button__primary">Заказать звонок</button>
         </form>
         <div class="footer__info">
@@ -415,15 +415,15 @@
 
                 </button>
             </header>
-            <main class="modal__content modal__content-form" id="modal-2-content">
+            <form class="modal__content modal__content-form" id="modal-2-content">
                 <p class="modal__header--mini">Вы также можете связаться с нами, отправив сообщение</p>
-                <input class="input" name placeholder="Ваше имя">
-                <input class="input" name placeholder="Ваш e-mail" data-email>
-                <input class="input" name placeholder="Ваш номер телефона" data-phone>
-                <input class="input" name placeholder="Введите сообщение">
+                <input class="input" name="name" placeholder="Ваше имя">
+                <input class="input" name="email" placeholder="Ваш e-mail" data-email>
+                <input class="input" name="phone" placeholder="Ваш номер телефона" data-phone>
+                <input class="input" name="message" placeholder="Введите сообщение">
                 <span class="modal__footer-description">Нажимая кнопку «Отправить», я принимаю условия Пользовательского соглашения и даю своё согласие на
                 обработку моих персональных данных</span>
-            </main>
+            </form>
             <footer class="modal__footer">
                 <button class="button button__primary">Отправить заявку</button>
             </footer>

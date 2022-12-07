@@ -11,6 +11,10 @@
   box-sizing: border-box;
   margin-bottom: 130px;
 
+  img {
+    max-width: 100%;
+  }
+
   &:nth-child(odd) {
     padding-right: 84px;
   }

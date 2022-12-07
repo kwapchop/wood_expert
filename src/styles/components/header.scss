@@ -22,6 +22,7 @@
     width: 100%;
     z-index: 50;
     padding: 33px 16px;
+    box-shadow: 0 4px 4px 4px rgba(0, 0, 0, 0.15);
 
     &.active {
       display: flex;
@@ -183,7 +184,7 @@
 .first-items__menu {
   display: flex;
   flex-direction: column;
-  border-right: 1px solid black;
+  border-right: 1px solid rgba(0, 0, 0, .3);
 }
 
 @media screen and (max-width: 1800px) {

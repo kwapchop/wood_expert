@@ -103,6 +103,16 @@
   }
 }
 
+@media screen and (max-width: 600px) {
+  .catalog-article__arrows {
+    display: none;
+  }
+  .catalog-article__list {
+    position: relative;
+    margin-top: 60px;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .catalog-article {
     flex-direction: column;

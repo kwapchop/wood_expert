@@ -125,7 +125,7 @@
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   .footer__form {
     flex-direction: column;
     margin-bottom: 30px;
@@ -138,6 +138,7 @@
     button {
       margin-left: 0;
       margin-right: auto;
+      width: 306px;
     }
   }
 

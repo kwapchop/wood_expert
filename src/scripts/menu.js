@@ -1,15 +1,4 @@
-// $(document).ready(function () {
-//     const menuElements = $('[data-menu]').children('a');
-//     menuElements.on('mouseover', function (e) {
-//         $(e.currentTarget).next('[data-sub]').show();
-//     })
-//     menuElements.on('mouseleave', function (e) {
-//         setTimeout(function () {
-//             $('[data-sub]').hide();
-//         }, 200);
-//     })
-// });
-$(document).ready(function () {
+(function ($) {
     const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
     let regex = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
     $('[data-phone]').on('input', function (e) {
@@ -26,9 +15,7 @@ $(document).ready(function () {
             $(e.target).removeClass('error');
         }
     })
-});
 
-(function ($) {
     $.fn.menumaker = function (options) {
         var cssmenu = $(this), settings = $.extend({
             title: "Menu",
@@ -105,9 +92,7 @@ $(function () {
         $('.header__menu-burger').toggleClass('active');
 
     });
-});
 
-$(function () {
     if (is_touch_device()) {
         $('[data-is-mobile]').show();
         $('[data-menu-first] [data-menu]').on('click', function (e) {

@@ -9,6 +9,6 @@ buttonContactUs?.addEventListener('click', function (e) {
     MicroModal.show('modal-2');
 })
 
-document.querySelector('[data-contact-us]').addEventListener('click', function (e) {
+document.querySelector('[data-contact-us]')?.addEventListener('click', function (e) {
     MicroModal.show('modal-2');
 })
