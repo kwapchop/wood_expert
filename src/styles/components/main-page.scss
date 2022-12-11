@@ -39,10 +39,6 @@
   .banner-on-svg {
     position: fixed;
   }
-
-  .footer__society {
-    position: fixed;
-  }
 }
 
 .banner {
@@ -282,7 +278,8 @@
 
 #cssmenu .element-list__menu:hover > .element-list {
   z-index: 5000;
-  left: -129px;
+  right: 287px;
+  left: auto;
   top: -8px;
   padding-right: 63px;
   margin-left: -173px;
@@ -447,12 +444,14 @@
 }
 
 #cssmenu .element-list__menu:hover > .element-list.element-list-sub-sub {
-  left: -414px;
+  left: auto;
+  right: 241px;
   display: flex;
   flex-direction: column;
 }
 
 .element-list-sub-sub__menu {
+  width: 242px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(3px);
   background: rgba(0, 0, 0, 0.75);
@@ -461,6 +460,7 @@
 }
 
 .element-list__sub-title {
+  width: 242px;
   padding: 28px 24px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(3px);

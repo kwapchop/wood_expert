@@ -8,6 +8,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  [data-phone] {
+    font-weight: 400;
+  }
+
+  [data-phone]::placeholder {
+    font-weight: 300 !important;
+  }
 }
 
 .modal__container {

@@ -5,13 +5,16 @@ $(document).ready(function () {
         slidesToScroll: 3,
         prevArrow: '[data-prev]',
         nextArrow: '[data-next]',
+        appendDots: $('.slider-for'),
+        dots: true,
         responsive: [
             {
                 breakpoint: 600,
                 settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                },
+
             }
         ]
 

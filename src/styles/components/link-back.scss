@@ -3,6 +3,17 @@
   flex-direction: column;
   text-align: center;
 
+  p {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 19px;
+    text-transform: uppercase;
+    color: #4F4F4F;
+    padding: 0;
+    margin: 0;
+  }
+
   &:hover {
     cursor: pointer;
   }
@@ -20,4 +31,31 @@
 
 .link-center {
   margin: 0 auto;
+}
+
+@media screen and (max-width: 600px) {
+  .link-back {
+    display: inline-flex;
+    flex-direction: column;
+    text-align: center;
+    width: 145px;
+
+    p {
+      font-style: normal;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 19px;
+      text-transform: uppercase;
+      color: #4F4F4F;
+    }
+
+
+    &:hover {
+      cursor: pointer;
+    }
+
+    svg {
+      width: auto;
+    }
+  }
 }

@@ -6,10 +6,10 @@
   margin-top: 60px;
 
   &__society {
+    position: fixed;
     display: flex;
     justify-content: space-between;
     width: 134px;
-    position: absolute;
     left: 137px;
     bottom: 35px;
 
@@ -98,6 +98,13 @@
   }
 }
 
+@media screen and (max-width: 1800px) {
+  .footer__society {
+    position: absolute;
+    margin-bottom: 40px;
+  }
+}
+
 @media screen and (max-width: 1500px) {
   .footer__center {
     flex-basis: 739px;
@@ -110,7 +117,6 @@
   }
   .footer__society {
     position: initial;
-    margin-bottom: 40px;
   }
   .footer__center {
     width: 100%;
@@ -128,6 +134,7 @@
 @media screen and (max-width: 900px) {
   .footer__form {
     flex-direction: column;
+    align-items: center;
     margin-bottom: 30px;
 
     .input {
@@ -137,7 +144,7 @@
 
     button {
       margin-left: 0;
-      margin-right: auto;
+      margin-right: 20px;
       width: 306px;
     }
   }
@@ -153,7 +160,7 @@
 
     button {
       margin-left: 0;
-      margin-right: 0;
+      margin-right: 20px;
     }
   }
 }
