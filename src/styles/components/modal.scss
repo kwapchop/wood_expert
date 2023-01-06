@@ -230,3 +230,7 @@
 .micromodal-slide .modal__overlay {
   will-change: transform;
 }
+
+.modal__close:hover{
+  cursor: pointer;
+}

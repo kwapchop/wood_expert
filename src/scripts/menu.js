@@ -82,6 +82,15 @@
 })(jQuery);
 
 $(function () {
+    $('main').on('click', () => {
+        const burger = $('.header__menu-burger');
+        if (burger.hasClass('active')) {
+            $('[data-elements]').hide();
+            $('[data-sub-elements]').hide();
+            $('.header__burger').toggleClass('open');
+            burger.toggleClass('active');
+        }
+    })
     $('.header__burger').click(function () {
         if ($(this).hasClass('open')) {
             $('[data-elements]').hide();
