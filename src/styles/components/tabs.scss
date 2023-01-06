@@ -53,10 +53,9 @@
     justify-content: center;
     align-items: center;
     margin-bottom: 50px;
-    width: 49.3%;
 
     img{
-      width: 100%;
+      max-width: 586px;
       height: 333px;
     }
 
@@ -88,10 +87,8 @@
   &-inner-element {
     position: relative;
     margin-bottom: 65px;
-    width: 49.3%;
-
-    img{
-      width: 100%;
+    img {
+      max-width: 586px;
       height: 333px;
     }
 

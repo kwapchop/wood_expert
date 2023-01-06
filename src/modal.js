@@ -2,18 +2,16 @@ let modal = MicroModal.init();
 
 (function ($) {
     $('[data-send]').on('click', function () {
-        MicroModal.close('modal-2');
-        MicroModal.show('modal-1');
-
-        //     $.ajax({
-        //     url: '/index.php',
-        //     method: 'post',
-        //     dataType: 'html',
-        //     data: {text: 'Текст'},
-        //     success: function(data){
-        //         MicroModal.show('modal-1');
-        //     }
-        // })
+            $.ajax({
+            url: '/index.php',
+            method: 'post',
+            dataType: 'html',
+            data: {text: 'Текст'},
+            success: function(data){
+                MicroModal.close('modal-2');
+                MicroModal.show('modal-1');
+            }
+        })
     });
 })(jQuery);
 const buttonContactUs = document.querySelector('.header__call')
