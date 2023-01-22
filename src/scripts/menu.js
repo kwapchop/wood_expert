@@ -148,7 +148,6 @@ $(function () {
             $('[data-menu-second]').find(`[data-elements-${index}]`).show();
         })
         $('[data-menu-second] [data-menu]').on('click', function (e) {
-            e.preventDefault();
             $('[data-menu-second] [data-menu]').removeClass('active');
             $(e.target).addClass('active');
             const index = $(this).data('menu');

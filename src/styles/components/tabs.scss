@@ -225,7 +225,11 @@
     .pagination-input {
       border: none;
       font-size: 15px;
-      width: 160px;
+      width: auto;
+
+      &[disabled] {
+        background: transparent;
+      }
     }
 
     .pagination-list {
