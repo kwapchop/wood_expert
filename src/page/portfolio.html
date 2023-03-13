@@ -609,10 +609,10 @@
         <span data-scroll-up class="footer__upper">Вернуться наверх <img src="../assets/images/arrow-up.svg"
                                                                          alt=""></span>
         <div class="horizontal"></div>
-        <form class="footer__form">
-            <input class="input input__standard" type="text" placeholder="Имя">
+        <form class="footer__form" data-form>
+            <input class="input input__standard" data-name type="text" placeholder="Имя">
             <input class="input input__standard number" type="text" placeholder="Телефон" data-phone>
-            <button class="button button__primary">Заказать звонок</button>
+            <button class="button button__primary" data-send="/index.php">Заказать звонок</button>
         </form>
         <div class="footer__info">
             <a href="mailto:woodexpert71@gmail.com">woodexpert71@gmail.com</a>
@@ -649,7 +649,7 @@
 <div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <form class="modal__container modal__container-form" role="dialog" aria-modal="true"
-              aria-labelledby="modal-1-title">
+              aria-labelledby="modal-1-title" data-form>
             <header class="modal__header">
                 <button type="button" class="modal__close" aria-label="Close modal" data-micromodal-close>
                     <svg width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -670,7 +670,7 @@
                 обработку моих персональных данных</span>
             </form>
             <footer class="modal__footer">
-                <button class="button button__primary">Отправить заявку</button>
+                <button class="button button__primary" data-send="/index.php">Отправить заявку</button>
             </footer>
         </form>
     </div>

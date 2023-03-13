@@ -66,6 +66,9 @@
     text-decoration: none;
 
     img {
+      min-width: 321px;
+      height: 321px;
+      object-fit: cover;
       margin-bottom: 20px;
     }
   }
@@ -195,5 +198,11 @@
     width: 200px;
     height: 200px;
     font-size: 16px;
+  }
+
+  .block__element img {
+    width: 200px;
+    min-width: 200px;
+    height: 200px;
   }
 }

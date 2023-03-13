@@ -723,10 +723,10 @@
         <span data-scroll-up class="footer__upper">Вернуться наверх <img src="../assets/images/arrow-up.svg"
                                                                          alt=""></span>
         <div class="horizontal"></div>
-        <form class="footer__form">
-            <input class="input input__standard" type="text" placeholder="Имя">
-            <input class="input input__standard number" type="text" placeholder="Телефон" data-phone>
-            <button class="button button__primary">Заказать звонок</button>
+        <form class="footer__form" data-form>
+            <input class="input input__standard" name="name" type="text" placeholder="Имя">
+            <input class="input input__standard number" name="phone" type="text" placeholder="Телефон" data-phone>
+            <button class="button button__primary" data-send="/index.php">Заказать звонок</button>
         </form>
         <div class="footer__info">
             <a href="mailto:woodexpert71@gmail.com">woodexpert71@gmail.com</a>
@@ -763,7 +763,7 @@
 <div class="modal micromodal-slide" id="modal-2" aria-hidden="true">
     <div class="modal__overlay" tabindex="-1" data-micromodal-close>
         <form class="modal__container modal__container-form" role="dialog" aria-modal="true"
-              aria-labelledby="modal-1-title">
+              aria-labelledby="modal-1-title" data-form>
             <header class="modal__header">
                 <button type="button" class="modal__close" aria-label="Close modal" data-micromodal-close>
                     <svg width="61" height="61" viewBox="0 0 61 61" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -776,15 +776,15 @@
             </header>
             <main class="modal__content modal__content-form" id="modal-2-content">
                 <p class="modal__header--mini">Вы также можете связаться с нами, отправив сообщение</p>
-                <input class="input" name placeholder="Ваше имя">
-                <input class="input" name placeholder="Ваш e-mail" data-email>
-                <input class="input" name placeholder="Ваш номер телефона" data-phone>
-                <input class="input" name placeholder="Введите сообщение">
+                <input class="input" name="name" placeholder="Ваше имя">
+                <input class="input" name="email" placeholder="Ваш e-mail" data-email>
+                <input class="input" name="phone" placeholder="Ваш номер телефона" data-phone>
+                <input class="input" name="message" placeholder="Введите сообщение">
                 <span class="modal__footer-description">Нажимая кнопку «Отправить», я принимаю условия Пользовательского соглашения и даю своё согласие на
                 обработку моих персональных данных</span>
             </main>
             <footer class="modal__footer">
-                <button class="button button__primary">Отправить заявку</button>
+                <button class="button button__primary" data-send="/index.php">Отправить заявку</button>
             </footer>
         </form>
     </div>

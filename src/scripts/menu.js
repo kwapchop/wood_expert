@@ -1,18 +1,28 @@
 (function ($) {
     const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
     let regex = /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$/;
+    let buttons = $("[data-form]").find("button");
+    $(buttons).attr('disabled', true);
     $('[data-phone]').on('input', function (e) {
+        let form = $(this).closest('[data-form]');
+        let button = $(form).find("button");
         if (!regex.test(e.target.value)) {
             $(e.target).addClass('error');
+            $(button).attr('disabled', true);
         } else {
             $(e.target).removeClass('error');
+            $(button).attr('disabled', false);
         }
     });
     $('[data-email]').on('input', function (e) {
+        let form = $(this).closest('[data-form]');
+        let button = $(form).find("button");
         if (!EMAIL_REGEXP.test(e.target.value)) {
             $(e.target).addClass('error');
+            $(button).attr('disabled', true);
         } else {
             $(e.target).removeClass('error');
+            $(button).attr('disabled', false);
         }
     })
 

@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function () {
             tabsBody.forEach(body => {
                 body.classList.remove('active');
             })
-            document.querySelector('[data-inner-tab-element]').classList.add('active');
+            document.querySelector('[data-inner-tab-element]')?.classList.add('active');
         })
     })
 });
